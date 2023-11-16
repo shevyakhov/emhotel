@@ -1,0 +1,7 @@
+apply from: ModuleType.Library
+
+dependencies {
+
+	implementation Dependencies.FRAGMENT
+	implementation Dependencies.CICERONE
+}
