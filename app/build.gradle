@@ -1,44 +1,21 @@
-plugins {
-	id 'com.android.application'
-	id 'org.jetbrains.kotlin.android'
-}
-
-android {
-	namespace 'com.shevyakhov'
-	compileSdk 33
-
-	defaultConfig {
-		applicationId "com.shevyakhov"
-		minSdk 26
-		targetSdk 33
-		versionCode 1
-		versionName "1.0"
-
-		testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-	}
-
-	buildTypes {
-		release {
-			minifyEnabled false
-			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-		}
-	}
-	compileOptions {
-		sourceCompatibility JavaVersion.VERSION_1_8
-		targetCompatibility JavaVersion.VERSION_1_8
-	}
-	kotlinOptions {
-		jvmTarget = '1.8'
-	}
-}
+apply from: ModuleType.Application
 
 dependencies {
+	implementation Dependencies.KOTLIN_STANDARD_LIBRARY
+	implementation Dependencies.CORE
+	implementation Dependencies.APPCOMPAT
+	implementation Dependencies.MATERIAL
+	implementation Dependencies.FRAGMENT
+	implementation Dependencies.CONSTRAINT_LAYOUT
+	implementation Dependencies.KOIN_CORE
+	implementation Dependencies.KOIN_ANDROID
+	implementation Dependencies.CICERONE
+	implementation Dependencies.RETROFIT
+	implementation Dependencies.OKHTTP_INTERCEPTOR
+	implementation Dependencies.GSON
+	implementation Dependencies.GSON_CONVERTER
 
-	implementation 'androidx.core:core-ktx:1.9.0'
-	implementation 'androidx.appcompat:appcompat:1.6.1'
-	implementation 'com.google.android.material:material:1.10.0'
-	implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-	testImplementation 'junit:junit:4.13.2'
-	androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-	androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+	unpackMapValues(Modules.FEATURES) { implementation project(it) }
+	unpackMapValues(Modules.LIBRARIES) { implementation project(it) }
 }
