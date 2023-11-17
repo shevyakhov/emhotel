@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="hotel_title">Отель</string>
+	<string name="about_hotel">Об отеле</string>
+	<string name="navigateToRooms">К выбору номера</string>
+	<string name="conveniences_title">Удобства</string>
+	<string name="hotel_bars_subtitle">Самое необходимое</string>
+	<string name="inclusive_title">Что включено</string>
+	<string name="not_inclusive_title">Что не включено</string>
+</resources>

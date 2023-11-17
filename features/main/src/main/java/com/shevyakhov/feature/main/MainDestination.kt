@@ -1,11 +1,11 @@
 package com.shevyakhov.feature.main
 
 import androidx.fragment.app.Fragment
-import com.shevyakhov.feature.main.presentation.HomeFragment
+import com.shevyakhov.feature.main.presentation.MainFragment
 import com.shevyakhov.libraries.navigation.FragmentDestination
 
-object HomeDestination : FragmentDestination {
+object MainDestination : FragmentDestination {
 
 	override fun createInstance(): Fragment =
-		HomeFragment()
+		MainFragment()
 }
