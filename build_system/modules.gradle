@@ -3,6 +3,7 @@ ext.Modules = [
 	FEATURES 				: [
 		MAIN				: ":features:main",
 		SPLASH				: ":features:splash",
+		ROOMS				: ":features:hotelrooms",
 	],
 	LIBRARIES				: [
 		NAVIGATION			: ":libraries:navigation",
