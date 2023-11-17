@@ -17,5 +17,6 @@ dependencies {
 	implementation Dependencies.CICERONE
 
 	implementation project(Modules.LIBRARIES.NAVIGATION)
+	implementation project(Modules.LIBRARIES.NETWORK)
 
 }

@@ -5,7 +5,7 @@ import androidx.fragment.app.FragmentFactory
 import com.github.terrakok.cicerone.Router
 import com.github.terrakok.cicerone.Screen
 import com.github.terrakok.cicerone.androidx.FragmentScreen
-import com.shevyakhov.feature.main.HomeDestination
+import com.shevyakhov.feature.main.MainDestination
 import com.shevyakhov.libraries.navigation.FragmentDestination
 import com.shevyakhov.libraries.navigation.MainRouter
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -14,7 +14,7 @@ class MainRouterImpl(
 	private val router: Router,
 ) : MainRouter {
 
-	override val currentScreen = MutableStateFlow<FragmentDestination>(HomeDestination)
+	override val currentScreen = MutableStateFlow<FragmentDestination>(MainDestination)
 
 	private val backStack = mutableListOf<FragmentDestination>()
 

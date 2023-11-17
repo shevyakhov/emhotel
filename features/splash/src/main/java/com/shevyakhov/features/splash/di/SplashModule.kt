@@ -5,7 +5,7 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val SplashModule = module {
-	viewModel { (firstStartFlag: Boolean) ->
+	viewModel {
 		SplashViewModel(
 			router = get()
 		)
