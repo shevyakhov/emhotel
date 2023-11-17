@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<color name="black">#000000</color>
 	<color name="grey">#969696</color>
 	<color name="dark_grey">#4E4E4E</color>
 	<color name="light_grey">#E0DDDD</color>
 	<color name="white">#FFFFFF</color>
 	<color name="surface">#F6F6F9</color>
+
+	<color name="blue">#0D72FF</color>
+
+	<array name="rating_color">
+		<item>#56FFC700</item>
+		<!--Add more colors if needed-->
+	</array>
+
+	<array name="rating_color_text">
+		<item>#FFA800</item>
+		<!--Add more colors if needed-->
+	</array>
 </resources>

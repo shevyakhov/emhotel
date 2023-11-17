@@ -7,4 +7,6 @@
 	<string name="hotel_bars_subtitle">Самое необходимое</string>
 	<string name="inclusive_title">Что включено</string>
 	<string name="not_inclusive_title">Что не включено</string>
+	<string name="from">от</string>
+	<string name="error">Произошла ошибка, повторная загрузка через 5 секунд</string>
 </resources>

@@ -8,7 +8,9 @@
 
 	<ScrollView
 		android:layout_width="match_parent"
-		android:layout_height="match_parent">
+		android:layout_height="0dp"
+		app:layout_constraintBottom_toTopOf="@id/buttonPanel"
+		app:layout_constraintTop_toTopOf="parent">
 
 		<LinearLayout
 			android:layout_width="match_parent"
@@ -24,11 +26,12 @@
 
 				<TextView
 					android:id="@+id/title"
+					style="@style/LabelAppearance"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:layout_marginTop="20dp"
 					android:gravity="center"
 					android:text="@string/hotel_title"
+					android:textStyle="bold"
 					app:layout_constraintEnd_toEndOf="parent"
 					app:layout_constraintStart_toStartOf="parent"
 					app:layout_constraintTop_toTopOf="parent" />
@@ -40,41 +43,39 @@
 					android:layout_marginVertical="15dp"
 					app:layout_constraintTop_toBottomOf="@id/title" />
 
-
 				<com.google.android.material.tabs.TabLayout
-					android:id="@+id/vp_pages"
-					android:layout_width="75dp"
-					android:layout_height="20dp"
-					android:layout_marginBottom="15dp"
-					android:orientation="horizontal"
+					android:id="@+id/tab_layout"
+					android:layout_width="wrap_content"
+					android:layout_height="15dp"
+					android:layout_marginBottom="5dp"
+					android:background="@drawable/round_corners"
 					app:layout_constraintBottom_toBottomOf="@id/hotel_images_vp"
-					app:layout_constraintEnd_toEndOf="@id/hotel_images_vp"
-					app:layout_constraintStart_toStartOf="@id/hotel_images_vp"
-					app:tabBackground="@drawable/tab_indicator_default"
-					app:tabIndicator="@drawable/tab_indicator_selected"
-					app:tabIndicatorColor="@color/white"
-					app:tabIndicatorGravity="center"
-					app:tabIndicatorHeight="8dp" />
-
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:tabBackground="@drawable/tab_selector"
+					app:tabGravity="center"
+					app:tabIndicatorHeight="0dp" />
 
 				<LinearLayout
 					android:id="@+id/rating_layout"
 					android:layout_width="wrap_content"
 					android:layout_height="30dp"
 					android:layout_marginTop="15dp"
-
 					android:gravity="center_vertical"
 					android:orientation="horizontal"
+					android:padding="5dp"
 					app:layout_constraintStart_toStartOf="parent"
 					app:layout_constraintTop_toBottomOf="@id/hotel_images_vp">
 
 					<ImageView
+						android:id="@+id/star"
 						android:layout_width="15dp"
 						android:layout_height="15dp"
 						android:src="@drawable/ic_star" />
 
 					<TextView
 						android:id="@+id/hotel_rating"
+						style="@style/BasicTextAppearance"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						android:layout_marginHorizontal="5dp"
@@ -83,6 +84,7 @@
 
 					<TextView
 						android:id="@+id/hotel_rating_name"
+						style="@style/BasicTextAppearance"
 						android:layout_width="wrap_content"
 						android:layout_height="wrap_content"
 						tools:text="Превосходно!" />
@@ -92,18 +94,22 @@
 
 				<TextView
 					android:id="@+id/hotel_name"
+					style="@style/LabelAppearance"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_marginTop="15dp"
+					android:textStyle="bold"
 					app:layout_constraintStart_toStartOf="parent"
 					app:layout_constraintTop_toBottomOf="@id/rating_layout"
 					tools:text="Steigenberger Makadi" />
 
 				<TextView
 					android:id="@+id/hotel_address"
+					style="@style/LabelSubTextAppearance"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
 					android:layout_marginTop="15dp"
+					android:textColor="@color/blue"
 					app:layout_constraintStart_toStartOf="parent"
 					app:layout_constraintTop_toBottomOf="@id/hotel_name"
 					tools:text="Madinat Makadi, Safaga Road, Makadi Bay, Египет" />
@@ -118,16 +124,19 @@
 
 					<TextView
 						android:id="@+id/minimal_price"
+						style="@style/PriceTextAppearance"
 						android:layout_width="0dp"
 						android:layout_height="wrap_content"
 						android:layout_weight="1"
+						android:textStyle="bold"
 						tools:text="от 134 673 ₽" />
 
 					<TextView
 						android:id="@+id/price_for_it"
+						style="@style/PriceLabelAppearance"
 						android:layout_width="0dp"
 						android:layout_height="wrap_content"
-						android:layout_gravity="end"
+						android:layout_gravity="end|center_vertical"
 						android:layout_weight="1"
 						tools:text="Steigenberger Makadi" />
 				</LinearLayout>
@@ -142,10 +151,12 @@
 
 				<TextView
 					android:id="@+id/about_hotel"
+					style="@style/LabelAppearance"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:layout_marginTop="20dp"
 					android:text="@string/about_hotel"
+					android:textStyle="bold"
 					app:layout_constraintEnd_toEndOf="parent"
 					app:layout_constraintStart_toStartOf="parent"
 					app:layout_constraintTop_toTopOf="parent" />
@@ -159,9 +170,11 @@
 
 				<TextView
 					android:id="@+id/hotel_description"
+					style="@style/BasicTextAppearance"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
 					android:layout_marginTop="20dp"
+					android:textColor="@color/black"
 					app:layout_constraintTop_toBottomOf="@id/chips_peculiarities"
 					tools:text="Отель VIP-класса с собственными гольф полями. Высокий уровнь сервиса. Рекомендуем для респектабельного отдыха. Отель принимает гостей от 18 лет!" />
 
@@ -174,6 +187,7 @@
 					android:background="@drawable/round_corners"
 					android:backgroundTint="@color/surface"
 					android:padding="15dp"
+					android:textStyle="bold"
 					app:layout_constraintTop_toBottomOf="@id/hotel_description">
 
 					<ImageView
@@ -192,6 +206,7 @@
 						android:layout_height="wrap_content"
 						android:layout_marginStart="15dp"
 						android:text="@string/conveniences_title"
+						android:textColor="@color/black"
 						app:layout_constraintBottom_toTopOf="@id/conveniences_subtitle"
 						app:layout_constraintStart_toEndOf="@id/conveniences_image"
 						app:layout_constraintTop_toTopOf="parent" />
@@ -238,6 +253,8 @@
 						android:layout_height="wrap_content"
 						android:layout_marginStart="15dp"
 						android:text="@string/inclusive_title"
+
+						android:textColor="@color/black"
 						app:layout_constraintBottom_toTopOf="@id/inclusive_image"
 						app:layout_constraintStart_toEndOf="@id/inclusive_image"
 						app:layout_constraintTop_toBottomOf="@id/divider_inclusive" />
@@ -263,9 +280,9 @@
 						android:layout_width="match_parent"
 						android:layout_height="1dp"
 						android:layout_marginHorizontal="40dp"
-						app:layout_constraintBottom_toTopOf="@id/not_inclusive_title"
 						android:layout_marginVertical="10dp"
 						android:background="@color/light_grey"
+						app:layout_constraintBottom_toTopOf="@id/not_inclusive_title"
 						app:layout_constraintTop_toBottomOf="@id/inclusive_subtitle" />
 
 					<ImageView
@@ -274,9 +291,9 @@
 						android:layout_height="wrap_content"
 						android:scaleType="center"
 						android:src="@drawable/ic_closesquare"
-						app:layout_constraintTop_toTopOf="@id/not_inclusive_title"
 						app:layout_constraintBottom_toBottomOf="@id/not_inclusive_subtitle"
-						app:layout_constraintStart_toStartOf="parent" />
+						app:layout_constraintStart_toStartOf="parent"
+						app:layout_constraintTop_toTopOf="@id/not_inclusive_title" />
 
 					<TextView
 						android:id="@+id/not_inclusive_title"
@@ -284,6 +301,8 @@
 						android:layout_height="wrap_content"
 						android:layout_marginStart="15dp"
 						android:text="@string/not_inclusive_title"
+
+						android:textColor="@color/black"
 						app:layout_constraintBottom_toTopOf="@id/not_inclusive_subtitle"
 						app:layout_constraintStart_toEndOf="@id/not_inclusive_image"
 						app:layout_constraintTop_toBottomOf="@id/divider_not_inclusive" />
@@ -312,6 +331,7 @@
 	</ScrollView>
 
 	<androidx.constraintlayout.widget.ConstraintLayout
+		android:id="@+id/buttonPanel"
 		android:layout_width="match_parent"
 		android:layout_height="0dp"
 		android:layout_marginTop="3dp"
@@ -323,9 +343,12 @@
 
 		<Button
 			android:id="@+id/navigateToRooms"
+			style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
+			android:backgroundTint="@color/blue"
 			android:text="@string/navigateToRooms"
+			app:background="@null"
 			app:layout_constraintBottom_toBottomOf="parent" />
 	</androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
