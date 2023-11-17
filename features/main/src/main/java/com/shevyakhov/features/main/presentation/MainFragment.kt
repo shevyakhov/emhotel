@@ -98,7 +98,9 @@ class MainFragment : Fragment() {
 					this.addView(createChip(chipName))
 				}
 			}
-
+			navigateToRooms.setOnClickListener {
+				viewModel.navigateToHotelRooms()
+			}
 		}
 	}
 

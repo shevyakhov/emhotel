@@ -3,6 +3,7 @@ package com.shevyakhov.emhotel
 import android.app.Application
 import com.shevyakhov.emhotel.di.AppModule
 import com.shevyakhov.emhotel.di.RouterModule
+import com.shevyakhov.features.Roomsrooms.di.RoomsFragmentModule
 import com.shevyakhov.features.main.di.MainFragmentModule
 import com.shevyakhov.features.splash.di.SplashModule
 import com.shevyakhov.libraries.network.di.BACKEND
@@ -25,6 +26,7 @@ class App : Application() {
 			modules(NetworkModule)
 
 			modules(MainFragmentModule)
+			modules(RoomsFragmentModule)
 			modules(SplashModule)
 		}
 	}
