@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.shevyakhov.feature.splash.databinding.FragmentSplashBinding
+import com.shevyakhov.features.splash.databinding.FragmentSplashBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SplashFragment : Fragment() {
