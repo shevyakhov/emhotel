@@ -3,10 +3,10 @@ package com.shevyakhov.features.hotelrooms.domain.entity
 import com.google.gson.annotations.SerializedName
 
 data class RoomsData(
-	@SerializedName("rooms") var rooms: List<Rooms> = listOf(),
+	@SerializedName("rooms") var rooms: List<Room> = listOf(),
 )
 
-data class Rooms(
+data class Room(
 	@SerializedName("id") var id: Int? = null,
 	@SerializedName("name") var name: String? = null,
 	@SerializedName("price") var price: Int? = null,

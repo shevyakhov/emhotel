@@ -1,4 +1,4 @@
-package com.shevyakhov.features.hotelrooms.presentation.viewpager
+package com.shevyakhov.features.hotelrooms.presentation.adapters.viewpager
 
 import android.view.LayoutInflater
 import android.view.View

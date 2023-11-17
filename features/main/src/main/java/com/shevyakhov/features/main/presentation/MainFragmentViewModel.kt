@@ -33,7 +33,8 @@ class MainFragmentViewModel(
 	}
 
 	fun navigateToHotelRooms() {
-		router.navigateToHotelRooms()
+		val content = _uiState.value as? UiState.Content ?: return
+		router.navigateToHotelRooms(content.hotelData.name ?: return)
 	}
 
 	fun retryLoading() = viewModelScope.launch(handler) {

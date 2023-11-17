@@ -6,7 +6,7 @@ import com.shevyakhov.libraries.navigation.MainRouter
 
 class MainFragmentRouterImpl(private val mainRouter: MainRouter) : MainFragmentRouter {
 
-	override fun navigateToHotelRooms() {
-		mainRouter.open(RoomsDestination)
+	override fun navigateToHotelRooms(hotelName:String) {
+		mainRouter.open(RoomsDestination(hotelName))
 	}
 }

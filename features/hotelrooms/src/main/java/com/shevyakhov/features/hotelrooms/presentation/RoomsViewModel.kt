@@ -32,12 +32,17 @@ class RoomsViewModel(
 		_uiState.value = UiState.Content(hotelData)
 	}
 
-	fun navigateToHotelRooms() {
-		router.navigateToRoomDetails(0)
+
+	fun navigateToHotelRooms(id: Int) {
+		router.navigateToRoomDetails(id)
 	}
 
 	fun retryLoading() = viewModelScope.launch(handler) {
 		delay(5000L)
 		loadData()
+	}
+
+	fun navigateBack() {
+		router.navigateBack()
 	}
 }
