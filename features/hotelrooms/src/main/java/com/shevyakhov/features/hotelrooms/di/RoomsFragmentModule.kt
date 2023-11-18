@@ -1,4 +1,4 @@
-package com.shevyakhov.features.Roomsrooms.di
+package com.shevyakhov.features.hotelrooms.di
 
 import com.shevyakhov.features.hotelrooms.data.api.RoomsApi
 import com.shevyakhov.features.hotelrooms.data.datasource.RoomsDataSource
