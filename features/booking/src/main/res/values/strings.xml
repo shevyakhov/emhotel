@@ -4,5 +4,8 @@
 	<string name="chooseRoom">Выбрать номер</string>
 	<string name="from">от</string>
 	<string name="more_info">Подробнее о номере</string>
+	<string name="booking_title">Бронирование</string>
+	<string name="button_pay">Оплатить</string>
+	<string name="buyer_info_label">Информация о покупателе</string>
 
 </resources>
