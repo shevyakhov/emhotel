@@ -24,4 +24,6 @@ ext.Versions =
 		RETROFIT            : "2.9.0",
 		OKHTTP              : "4.10.0",
 		GLIDE               : "4.14.2",
+		EXPANDABLE_RV       : "0.9.3",
+		DECORO			    : "1.1.1",
 	]

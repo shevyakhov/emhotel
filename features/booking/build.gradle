@@ -16,6 +16,8 @@ dependencies {
 	implementation Dependencies.GLIDE
 	implementation Dependencies.CICERONE
 	implementation Dependencies.GSON
+	implementation Dependencies.EXPANDABLE_RV
+	implementation Dependencies.DECORO
 
 	implementation project(Modules.LIBRARIES.NAVIGATION)
 	implementation project(Modules.LIBRARIES.NETWORK)

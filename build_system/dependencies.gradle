@@ -48,4 +48,6 @@ ext.Dependencies =
 		COROUTINE_TEST         : "org.jetbrains.kotlinx:kotlinx-coroutines-test:${Versions.COROUTINE}",
 
 		LOTTIE                 : "com.airbnb.android:lottie:${Versions.LOTTIE}",
+		EXPANDABLE_RV          : "com.github.pokercc:ExpandableRecyclerView:${Versions.EXPANDABLE_RV}",
+		DECORO		           : "ru.tinkoff.decoro:decoro:${Versions.DECORO}",
 	]
