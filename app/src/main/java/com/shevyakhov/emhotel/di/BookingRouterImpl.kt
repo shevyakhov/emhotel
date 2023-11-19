@@ -9,7 +9,7 @@ class BookingRouterImpl(private val router: MainRouter) : BookingRouter {
 		router.exit()
 	}
 
-	override fun navigateToConfirmOrder() {
+	override fun navigateToConfirmOrder(order: String) {
 
 	}
 }

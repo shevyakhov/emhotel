@@ -122,6 +122,7 @@
 			android:id="@+id/booking_base_info_layout"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
 			android:background="@drawable/round_corners"
 			android:padding="15dp"
 			app:layout_constraintTop_toBottomOf="@id/hotel_info_layout">
@@ -130,6 +131,7 @@
 				android:id="@+id/fly_from_label"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
+				android:text="@string/fly_from_label"
 				app:layout_constraintEnd_toStartOf="@id/fly_from_text"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toTopOf="parent" />
@@ -149,6 +151,7 @@
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="10dp"
+				android:text="@string/fly_city_label"
 				app:layout_constraintEnd_toStartOf="@id/fly_city_text"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/fly_from_label" />
@@ -168,6 +171,7 @@
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="10dp"
+				android:text="@string/fly_date_label"
 				app:layout_constraintEnd_toStartOf="@id/fly_date_text"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/fly_city_label" />
@@ -187,6 +191,7 @@
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="10dp"
+				android:text="@string/fly_days_label"
 				app:layout_constraintEnd_toStartOf="@id/fly_days_text"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/fly_date_label" />
@@ -206,6 +211,7 @@
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="10dp"
+				android:text="@string/fly_hotel_label"
 				app:layout_constraintEnd_toStartOf="@id/fly_hotel_text"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/fly_days_label" />
@@ -225,9 +231,10 @@
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="10dp"
+				android:text="@string/fly_room_label"
 				app:layout_constraintEnd_toStartOf="@id/fly_room_text"
 				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toBottomOf="@id/fly_days_label" />
+				app:layout_constraintTop_toBottomOf="@id/fly_hotel_label" />
 
 			<TextView
 				android:id="@+id/fly_room_text"
@@ -244,6 +251,7 @@
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
 				android:layout_marginTop="10dp"
+				android:text="@string/fly_eating_label"
 				app:layout_constraintEnd_toStartOf="@id/fly_eating_text"
 				app:layout_constraintStart_toStartOf="parent"
 				app:layout_constraintTop_toBottomOf="@id/fly_room_label" />
@@ -280,19 +288,213 @@
 
 
 			<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/telephone_layout"
 				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:background="@color/surface"
+				android:hint="@string/telephone"
 				app:layout_constraintTop_toBottomOf="@id/buyer_info_label">
 
 				<com.google.android.material.textfield.TextInputEditText
-					android:id="@+id/food_name_textview"
+					android:id="@+id/telephone"
 					android:layout_width="match_parent"
 					android:layout_height="wrap_content"
-					android:inputType="text"
+					android:inputType="phone"
 					android:maxLines="1" />
 			</com.google.android.material.textfield.TextInputLayout>
 
+			<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/email_layout"
+				style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="5dp"
+				android:background="@color/surface"
+				android:hint="@string/email"
+				app:layout_constraintTop_toBottomOf="@id/telephone_layout">
+
+				<com.google.android.material.textfield.TextInputEditText
+					android:id="@+id/email"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:inputType="textEmailAddress"
+					android:maxLines="1" />
+			</com.google.android.material.textfield.TextInputLayout>
+
+			<TextView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/data_help"
+				app:layout_constraintTop_toBottomOf="@id/email_layout" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+		<pokercc.android.expandablerecyclerview.ExpandableRecyclerView
+			android:id="@+id/tourists_rv"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_marginTop="5dp"
+			android:background="@drawable/round_corners"
+			app:layout_constraintTop_toBottomOf="@id/buyer_info_layout" />
+
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/addTouristsLayout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:background="@drawable/round_corners"
+			android:padding="15dp"
+			app:layout_constraintTop_toBottomOf="@id/tourists_rv">
+
+			<TextView
+				android:id="@+id/addLabel"
+				style="@style/LabelAppearance"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:text="@string/addLabel"
+				android:textStyle="bold"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toStartOf="@id/buttonAddTourist"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<ImageView
+				android:id="@+id/buttonAddTourist"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:background="@drawable/round_corners"
+				android:backgroundTint="@color/blue"
+				android:padding="3dp"
+				android:src="@drawable/ic_add"
+				app:layout_constraintBottom_toBottomOf="parent"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@id/addLabel"
+				app:layout_constraintTop_toTopOf="parent" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/payment_info_layout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="5dp"
+			android:background="@drawable/round_corners"
+			android:padding="15dp"
+			app:layout_constraintTop_toBottomOf="@id/addTouristsLayout">
+
+			<TextView
+				android:id="@+id/payment_tour_label"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:text="@string/payment_tour_label"
+				app:layout_constraintEnd_toStartOf="@id/payment_tour_text"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
+
+			<TextView
+				android:id="@+id/payment_tour_text"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:gravity="end"
+				android:textColor="@color/black"
+				android:textStyle="bold"
+				app:layout_constraintBottom_toBottomOf="@id/payment_tour_label"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@id/payment_tour_label"
+				app:layout_constraintTop_toTopOf="@id/payment_tour_label" />
+
+			<TextView
+				android:id="@+id/payment_fuel_label"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:text="@string/payment_fuel_label"
+				app:layout_constraintEnd_toStartOf="@id/payment_fuel_text"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/payment_tour_label" />
+
+			<TextView
+				android:id="@+id/payment_fuel_text"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:gravity="end"
+				android:textColor="@color/black"
+				android:textStyle="bold"
+				app:layout_constraintBottom_toBottomOf="@id/payment_fuel_label"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@id/payment_fuel_label"
+				app:layout_constraintTop_toTopOf="@id/payment_fuel_label" />
+
+			<TextView
+				android:id="@+id/payment_service_label"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:text="@string/payment_service_label"
+				app:layout_constraintEnd_toStartOf="@id/payment_service_text"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/payment_fuel_label" />
+
+			<TextView
+				android:id="@+id/payment_service_text"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:gravity="end"
+				android:textColor="@color/black"
+				android:textStyle="bold"
+				app:layout_constraintBottom_toBottomOf="@id/payment_service_label"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@id/payment_service_label"
+				app:layout_constraintTop_toTopOf="@id/payment_service_label" />
+
+			<TextView
+				android:id="@+id/payment_total_label"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="10dp"
+				android:text="@string/payment_total_label"
+				app:layout_constraintEnd_toStartOf="@id/payment_total_text"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/payment_service_label" />
+
+			<TextView
+				android:id="@+id/payment_total_text"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:gravity="end"
+				android:textColor="@color/blue"
+				android:textStyle="bold"
+				app:layout_constraintBottom_toBottomOf="@id/payment_total_label"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@id/payment_total_label"
+				app:layout_constraintTop_toTopOf="@id/payment_total_label" />
+
+		</androidx.constraintlayout.widget.ConstraintLayout>
+
+		<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/buttonPanel"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="3dp"
+			android:layout_weight="1"
+			android:background="@color/white"
+			android:padding="10dp"
+			app:layout_constraintTop_toBottomOf="@id/payment_info_layout">
+
+			<Button
+				android:id="@+id/navigateToPayment"
+				style="@style/TextAppearance.AppCompat.Widget.Button.Colored"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:backgroundTint="@color/blue"
+				android:text="@string/button_pay"
+				android:textAllCaps="false"
+				app:background="@null"
+				app:layout_constraintBottom_toBottomOf="parent" />
 		</androidx.constraintlayout.widget.ConstraintLayout>
 	</androidx.constraintlayout.widget.ConstraintLayout>
 

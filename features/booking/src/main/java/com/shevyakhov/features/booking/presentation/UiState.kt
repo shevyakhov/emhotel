@@ -6,6 +6,6 @@ sealed class UiState {
 	object Initial : UiState()
 	class Error(val e: Throwable) : UiState()
 	data class Content(
-		val hotelData: BookingData,
+		val bookingData: BookingData,
 	) : UiState()
 }
