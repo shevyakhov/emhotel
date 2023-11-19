@@ -65,13 +65,13 @@ class RoomsFragment : Fragment() {
 
 	private fun renderContent(state: UiState.Content) {
 		with(binding) {
-			val adapter = RoomsAdapter {
+			val adapter = RoomsAdapter(
 				object : RoomsAdapter.RoomsOnClick {
 					override fun invoke(id: Int) {
 						viewModel.navigateToHotelRooms(id)
 					}
 				}
-			}
+			)
 			recyclerView.adapter = adapter
 			adapter.setNewData(state.hotelData.rooms)
 		}

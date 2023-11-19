@@ -14,7 +14,7 @@ import com.shevyakhov.features.hotelrooms.domain.entity.Room
 import com.shevyakhov.features.hotelrooms.presentation.adapters.viewpager.SliderItem
 import com.shevyakhov.features.hotelrooms.presentation.adapters.viewpager.ViewPagerAdapter
 
-class RoomsAdapter(private val onClick: (id: Int) -> Unit) : RecyclerView.Adapter<RoomsAdapter.Holder>() {
+class RoomsAdapter(private val onClick: RoomsOnClick) : RecyclerView.Adapter<RoomsAdapter.Holder>() {
 
 	var rooms = mutableListOf<Room>()
 	fun setNewData(newData: List<Room>) {
