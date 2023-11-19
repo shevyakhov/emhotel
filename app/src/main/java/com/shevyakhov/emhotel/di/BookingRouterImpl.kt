@@ -1,6 +1,7 @@
 package com.shevyakhov.emhotel.di
 
 import com.shevyakhov.features.booking.presentation.navigation.BookingRouter
+import com.shevyakhov.features.orderconfirm.OrderConfirmDestination
 import com.shevyakhov.libraries.navigation.MainRouter
 
 class BookingRouterImpl(private val router: MainRouter) : BookingRouter {
@@ -10,6 +11,6 @@ class BookingRouterImpl(private val router: MainRouter) : BookingRouter {
 	}
 
 	override fun navigateToConfirmOrder(order: String) {
-
+		router.open(OrderConfirmDestination(order))
 	}
 }

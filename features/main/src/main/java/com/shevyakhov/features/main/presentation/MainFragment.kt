@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.addCallback
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -44,6 +45,9 @@ class MainFragment : Fragment() {
 	}
 
 	private fun bindData() {
+		requireActivity()
+			.onBackPressedDispatcher
+			.addCallback(viewLifecycleOwner) {}
 		val scope = viewLifecycleOwner.lifecycleScope
 		viewModel.uiState.onEach { state ->
 			when (state) {
