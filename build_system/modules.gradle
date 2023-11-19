@@ -5,6 +5,7 @@ ext.Modules = [
 		SPLASH				: ":features:splash",
 		ROOMS				: ":features:hotelrooms",
 		BOOKING				: ":features:booking",
+		ORDER_CONFIRM		: ":features:orderconfirm",
 	],
 	LIBRARIES				: [
 		NAVIGATION			: ":libraries:navigation",

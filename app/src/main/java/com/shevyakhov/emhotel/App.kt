@@ -6,6 +6,7 @@ import com.shevyakhov.emhotel.di.RouterModule
 import com.shevyakhov.features.booking.di.BookingFragmentModule
 import com.shevyakhov.features.hotelrooms.di.RoomsFragmentModule
 import com.shevyakhov.features.main.di.MainFragmentModule
+import com.shevyakhov.features.orderconfirm.di.OrderConfirmFragmentModule
 import com.shevyakhov.features.splash.di.SplashModule
 import com.shevyakhov.libraries.network.di.BACKEND
 import com.shevyakhov.libraries.network.di.NetworkModule
@@ -30,6 +31,7 @@ class App : Application() {
 			modules(RoomsFragmentModule)
 			modules(SplashModule)
 			modules(BookingFragmentModule)
+			modules(OrderConfirmFragmentModule)
 		}
 	}
 }

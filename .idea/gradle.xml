@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/features/booking" />
             <option value="$PROJECT_DIR$/features/hotelrooms" />
             <option value="$PROJECT_DIR$/features/main" />
+            <option value="$PROJECT_DIR$/features/orderconfirm" />
             <option value="$PROJECT_DIR$/features/splash" />
             <option value="$PROJECT_DIR$/libraries" />
             <option value="$PROJECT_DIR$/libraries/navigation" />
